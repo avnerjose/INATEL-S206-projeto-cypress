@@ -7,6 +7,7 @@ describe("Criando cenários de teste para o site coffee-shop", () => {
     cy.visit(website);
 
     cy.get('[data-test="shop-here-button"]').click();
+    cy.wait(1000);
     cy.get(":nth-child(1) > .items-center > .bg-brown-500").click();
     cy.get('[data-test="cart-link"] > .flex').should("contain.text", 1);
   });
